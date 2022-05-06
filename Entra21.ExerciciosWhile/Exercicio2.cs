@@ -18,6 +18,7 @@ namespace Entra21.ExerciciosWhile
                 Console.WriteLine("Digite um nome: ");
                 nome = Console.ReadLine();
                 texto = texto + nome;
+
             }
         }
 

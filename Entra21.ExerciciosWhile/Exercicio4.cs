@@ -10,6 +10,7 @@ namespace Entra21.ExerciciosWhile
     {
         public void Executar()
         {
+            Console.WriteLine("Seja Bem Vindo");
             double peso = 0;
             int quantidadePessoas = 0;
             Console.WriteLine("Digite o seu peso: ");
@@ -21,7 +22,7 @@ namespace Entra21.ExerciciosWhile
 
                 quantidadePessoas++;
             }
-            Console.WriteLine(quantidadePessoas + " pessoas responderam");
+            Console.WriteLine(quantidadePessoas + "quantidade de pessoas responderam ");
 
         }
 
