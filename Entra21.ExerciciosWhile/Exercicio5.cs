@@ -20,7 +20,7 @@ namespace Entra21.ExerciciosWhile
             int carrosInicioA = 0;
             int somaAnoCarros = 0;
             double somaValorCarros = 0;
-            while (indice == quantidadeCadastro)
+            while (indice < quantidadeCadastro)
             {
                 Console.WriteLine("Digite o modelo carro: ");
                 string modelo = Console.ReadLine();
@@ -28,14 +28,14 @@ namespace Entra21.ExerciciosWhile
                 double valorCarro = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Ano de fabricação do carro: ");
                 int anoCarro = Convert.ToInt32(Console.ReadLine());
-                string nomeCarro = modelo.Substring(0,1);
+                string nomeCarro = modelo.Substring(0, 1);
                 if (nomeCarro == "G")
                 {
                     carrosInicioG++;
                 }
                 else if (nomeCarro == "A")
                 {
-                    carrosInicioA++; 
+                    carrosInicioA++;
                 }
                 somaAnoCarros = somaAnoCarros + anoCarro;
                 somaValorCarros = somaValorCarros + valorCarro;
