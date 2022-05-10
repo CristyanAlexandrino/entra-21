@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosWhile
 {
-    internal class Exercicio1
+    internal class Exercicio01
     {
         public void Executar()
         {
