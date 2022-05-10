@@ -76,10 +76,18 @@ namespace Entra21.ExerciciosWhile
                 else if (opcaoDesejada == 6)
                 {
                     nomeProduto = nomeProduto + "Bomba de Creme R$ 17,71" + "\n";
+                    valorProduto = 17.71;
+                    total = total + valorProduto;
+                }
+                else if (opcaoDesejada == 7)
+                {
+                    nomeProduto = nomeProduto + "Bomba de Morango R$ 4,82" + "\n";
+                    valorProduto = 4.82;
+                    total = total + valorProduto;
                 }
             }
             Console.WriteLine("Lista Pedidos \n" + nomeProduto);
         }
-   
+
     }
 }
