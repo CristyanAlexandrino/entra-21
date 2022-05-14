@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosWhile", "Entra21.ExemplosWhile\Entra21.ExemplosWhile.csproj", "{890C4A7B-DDEB-47F8-BE01-B0895DDA406E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemplosWhile", "Entra21.ExemplosWhile\Entra21.ExemplosWhile.csproj", "{890C4A7B-DDEB-47F8-BE01-B0895DDA406E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{823E7675-718D-4F77-87CB-6899779AEF18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "Entra21.ExerciciosWhile\Entra21.ExerciciosWhile.csproj", "{823E7675-718D-4F77-87CB-6899779AEF18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemplosFor", "Entra21.ExemplosFor\Entra21.ExemplosFor.csproj", "{C0E847E6-079D-4BD5-BC8E-F54E49D45FA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{823E7675-718D-4F77-87CB-6899779AEF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{823E7675-718D-4F77-87CB-6899779AEF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{823E7675-718D-4F77-87CB-6899779AEF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E847E6-079D-4BD5-BC8E-F54E49D45FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E847E6-079D-4BD5-BC8E-F54E49D45FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E847E6-079D-4BD5-BC8E-F54E49D45FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E847E6-079D-4BD5-BC8E-F54E49D45FA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
