@@ -10,11 +10,11 @@ namespace Entra21.ExemplosFor
     {
         public void Executar()
         {
-            for(int i = 0; i <= 23; i = i + 1)
+            for (int i = 0; i <= 23; i = i + 1)
             {
                 for (int j = 0; j < 60; j++)
                 {
-                    for(int k = 0; k <= 59; k++)
+                    for (int k = 0; k <= 59; k++)
                     {
                         Console.WriteLine(i + ":" + j + ":" + k);
                     }
