@@ -18,3 +18,11 @@ else if (opcaoDesejada == 5)
     Exercicio05 exercicio5 = new Exercicio05();
     exercicio5.Executar();
 }
+else if (opcaoDesejada == 8)
+{
+    Exercicio08 exercicio8 = new Exercicio08();
+    exercicio8.Executar();
+}
+
+
+
