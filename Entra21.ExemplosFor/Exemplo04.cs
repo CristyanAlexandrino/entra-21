@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExemplosFor
 {
-    internal class Exemplo05
+    internal class Exemplo04
     {
         public void Executar()
         {
