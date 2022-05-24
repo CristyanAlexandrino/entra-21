@@ -26,7 +26,7 @@ else if (opcaoDesejada == 3)
 }
 else if (opcaoDesejada == 4)
 {
-    ExemploProfessor exemplo = new ExemploProfessor();
-    exemplo.Executar();
+    Exercicio04 exercicio4 = new Exercicio04();
+    exercicio4.Executar();
 
 }
