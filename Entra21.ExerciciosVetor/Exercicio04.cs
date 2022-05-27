@@ -36,7 +36,7 @@ namespace Entra21.ExerciciosVetor
                 media = media + notas[i];
             }
                 media = media / 4;
-                Console.WriteLine(@"Nome Aluno: " + nomeAlunos[] + 
+                Console.WriteLine(@"Nome Aluno: " + nomeAlunos + 
                 "\nMedia de notas: " + media);
 
         }
