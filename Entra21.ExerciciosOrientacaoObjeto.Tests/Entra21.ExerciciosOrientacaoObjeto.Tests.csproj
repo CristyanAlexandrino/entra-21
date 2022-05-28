@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\entra21.ExemploOrientacaoObjetos\Entra21.ExemploOrientacaoObjetos.csproj" />
+    <ProjectReference Include="..\Entra21.ExemploOrientacaoObjetos\Entra21.ExemploOrientacaoObjetos.csproj" />
   </ItemGroup>
 
 </Project>
