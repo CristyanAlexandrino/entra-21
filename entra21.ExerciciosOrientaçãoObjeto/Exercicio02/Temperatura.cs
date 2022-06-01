@@ -11,30 +11,35 @@ namespace Entra21.ExerciciosOrientacaoObjeto.Exercicio02
         public double TemperaturaOrigem;
         public double TemperaturaDestino;
         public double ValorTemperatura;
-        public double GrausKelvin = 273.15;
-        public void CelsiusParaKelvin()
+        
+       
+        public double CelsiusParaKelvin()
         {
-           
+            double celsiusParaKelvin = ValorTemperatura + 273.15;
+            return celsiusParaKelvin;
 
         }
-        public void CelsiusParaFahreinheit()
+        public double CelsiusParaFahreinheit()
         {
 
+            double celsiusParaFahrenheit = ValorTemperatura * 1.8 + 32;
+            return celsiusParaFahrenheit;
 
         }
-        public void KelvinParaCelsius()
+        public double KelvinParaCelsius()
         {
-
+            double kelvinParaCelsius = ValorTemperatura - 273.00;
+            return kelvinParaCelsius;
 
         }
         public void KelvinParaFahreinheit()
         {
-
+            double kelvinParaFahrenheit = (ValorTemperatura - 273) * 1.8 + 32;
 
         }
         public void FahreinheitParaCelsius()
         {
-
+            double fahrenheitParaCelsius = (ValorTemperatura - 32) / 1.8;
 
         }
         public void FahreinheitParaKelvin()
