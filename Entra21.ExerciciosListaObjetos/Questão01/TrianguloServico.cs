@@ -22,24 +22,52 @@
 
         }
 
-        public void Editar()
+        public bool Editar(int codigoAlterar, int lado1, int lado2, int lado3)
         {
+            Triangulo trianguloParaAlterar = ObterPorCodigo(codigoAlterar);
+
+            if (trianguloParaAlterar == null)
+            {
+                return false;
+            }
+
+            trianguloParaAlterar.Lado01 = lado1;
+            trianguloParaAlterar.Lado02 = lado2;
+            trianguloParaAlterar.Lado03 = lado3;
+            return true;
 
         }
 
-       // public bool Apagar(int codigo)
-        //{
-
-       // }
-
-        public void ObterTodos()
+        public bool Apagar(int codigo)
         {
+            Triangulo trianguloApagar = ObterPorCodigo(codigo);
 
+            if (trianguloApagar == null)
+            {
+                return false;
+            }
+
+            triangulos.Remove(trianguloApagar);
+            return true;
         }
 
-        public void ObterPorCodigo()
+        public List<Triangulo> ObterTodos()
         {
+            return triangulos;
+        }
 
+        public Triangulo ObterPorCodigo(int codigo)
+        {
+            for (int i = 0; i < triangulos.Count; i++)
+            {
+                var trianguloAtual = triangulos[i];
+
+                if (trianguloAtual.Codigo == codigo)
+                {
+                    return trianguloAtual;
+                }
+            }
+            return null;
         }
 
     }

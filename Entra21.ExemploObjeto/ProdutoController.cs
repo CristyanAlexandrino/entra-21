@@ -26,7 +26,7 @@
                 else if (codigo == 3)
                 {
                     // Menu escolhido para editar produto
-                    // Editar();
+                    Editar();
                 }
                 else if (codigo == 4)
                 {
