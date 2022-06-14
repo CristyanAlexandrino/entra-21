@@ -16,6 +16,7 @@ namespace Entra21.ExerciciosListaObjetos.Questão01
             {
                 Console.Clear();
                 codigo = ApresentarMenu();
+                Console.Clear();
 
                 if (codigo == 1)
                 {
@@ -38,7 +39,8 @@ namespace Entra21.ExerciciosListaObjetos.Questão01
                     Apagar();
 
                 }
-                Console.WriteLine("\n\n Aperte alguma tecla para continuar");
+                Thread.Sleep(1500);
+
             }
 
 
@@ -88,8 +90,9 @@ namespace Entra21.ExerciciosListaObjetos.Questão01
             var lado2 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Digite o valor do lado 3: ");
-            var lado3 = Convert.ToInt32(Console.ReadLine);
-
+            var lado3 = Convert.ToInt32(Console.ReadLine());
+            
+            
             trianguloServico.Adicionar(lado1, lado2, lado3);
 
         }
@@ -104,10 +107,13 @@ namespace Entra21.ExerciciosListaObjetos.Questão01
 
                 return;
             }
-
             for (int i = 0; i < triangulo.Count; i++)
             {
-
+                var trianguloAtual = triangulo[i];
+                Console.WriteLine($"{trianguloAtual.Codigo} " +
+                    $"\n {trianguloAtual.Lado01}" +
+                    $"\n {trianguloAtual.Lado02}" +
+                    $"\n {trianguloAtual.Lado03} \n\n");
             }
         }
 

@@ -7,12 +7,15 @@
         public int Lado03;
         public int Codigo;
 
+        
         public bool ValidarTriangulo()
         {
-            var trianguloValido = true;
-            if (Lado01 + Lado02 < Lado03)
+            var segmento1 = Lado01 + Lado02;
+            var segmento2 = Lado01 + Lado03;
+            var segmento3 = Lado03 + Lado02;
+            if (segmento1 < 3 && segmento2 < 2 && segmento3 < 1 )
             {
-                return trianguloValido;
+                return true;
             }
             return false;
         }

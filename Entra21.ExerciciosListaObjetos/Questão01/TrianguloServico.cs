@@ -13,11 +13,14 @@
             triangulo.Lado03 = lado03;
             triangulo.Codigo = codigoAtual;
 
-            codigoAtual = codigoAtual++;
-
             var trianguloValido = triangulo.ValidarTriangulo();
-            return trianguloValido;
+            if (trianguloValido == true)
+            {
+            codigoAtual = codigoAtual + 1;
             triangulos.Add(triangulo);
+
+            }
+            return trianguloValido;
 
 
         }
