@@ -110,10 +110,10 @@ namespace Entra21.ExerciciosListaObjetos.Questão01
             for (int i = 0; i < triangulo.Count; i++)
             {
                 var trianguloAtual = triangulo[i];
-                Console.WriteLine($"{trianguloAtual.Codigo} " +
-                    $"\n {trianguloAtual.Lado01}" +
-                    $"\n {trianguloAtual.Lado02}" +
-                    $"\n {trianguloAtual.Lado03} \n\n");
+                Console.WriteLine($"Código: {trianguloAtual.Codigo} " +
+                    $"\nLado 1: {trianguloAtual.Lado01}" +
+                    $"\nLado 2: {trianguloAtual.Lado02}" +
+                    $"\nLado 3: {trianguloAtual.Lado03} \n\n");
             }
         }
 

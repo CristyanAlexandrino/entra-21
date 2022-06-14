@@ -13,7 +13,7 @@
             var segmento1 = Lado01 + Lado02;
             var segmento2 = Lado01 + Lado03;
             var segmento3 = Lado03 + Lado02;
-            if (segmento1 < 3 && segmento2 < 2 && segmento3 < 1 )
+            if (segmento1 > Lado03 && segmento2 > Lado02 && segmento3 > Lado01 )
             {
                 return true;
             }
