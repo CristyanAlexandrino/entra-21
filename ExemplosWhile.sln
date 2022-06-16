@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "entra21.ListaTiposPrimitivo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExemploObjeto", "Entra21.ExemploObjeto\Entra21.ExemploObjeto.csproj", "{03340E28-A66D-49C0-B4C8-964445616307}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosListaObjetos", "Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj", "{0811F53A-46E7-4CE9-A601-9F6C27AFECE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosListaObjetos", "Entra21.ExerciciosListaObjetos\Entra21.ExerciciosListaObjetos.csproj", "{0811F53A-46E7-4CE9-A601-9F6C27AFECE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExemploWindowsForm", "Entra21.ExemploWindowsForm\Entra21.ExemploWindowsForm.csproj", "{F5CE535D-A39A-484B-A82D-12D254ADFC24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{0811F53A-46E7-4CE9-A601-9F6C27AFECE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0811F53A-46E7-4CE9-A601-9F6C27AFECE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0811F53A-46E7-4CE9-A601-9F6C27AFECE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
