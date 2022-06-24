@@ -50,13 +50,13 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
 
             }
         }
-        public void Apagar(int codigoParaApagar)
+        public void Apagar(Endereco enderecoParaApagar)
         {
             for (int i = 0; i < enderecos.Count; i++)
             {
                 var endereco = enderecos[i];
 
-                if (endereco.Condigo == codigoParaApagar)
+                if (endereco.Condigo == enderecoParaApagar.Condigo)
                 {
                     
                     // Remove o endereço entronado da lista de endereços
