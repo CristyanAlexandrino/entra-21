@@ -15,6 +15,8 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
         public EnderecoServico()
         {
             enderecos = new List<Endereco>();
+
+            LerArquivo();
         }
 
         // Método Adicionar recebe como parâmentro o objeto endereço completo do Form(Controller)
@@ -94,7 +96,7 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
         }
         public void LerArquivo()
         {
-            if (File.Exists("endereco.json") == false)
+            if (File.Exists("enderecos.json") == false)
                 return;
 
             var enderecoEmJson = File.ReadAllText("enderecos.json");
