@@ -26,7 +26,6 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
 
             SalvarArquivo();
         }
-
         public void Editar(Endereco enderecoParaAlterar)
         {
             // Percorre a lista de endereços afim de encontrar o endereço que deve ser alterado
@@ -36,7 +35,7 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
                 var endereco = enderecos[i];
 
                 // Verifica se o código de enredeço percorrido é o enredeço que deve ser alterado
-                if (endereco.Condigo == enderecoParaAlterar.Condigo)
+                if (endereco.Codigo == enderecoParaAlterar.Codigo)
                 {
                     // Atualizado campos de endereço encontrado
                     endereco.EnderecoCompleto = enderecoParaAlterar.EnderecoCompleto;
@@ -56,9 +55,9 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             {
                 var endereco = enderecos[i];
 
-                if (endereco.Condigo == enderecoParaApagar.Condigo)
+                if (endereco.Codigo == enderecoParaApagar.Codigo)
                 {
-                    
+
                     // Remove o endereço entronado da lista de endereços
                     enderecos.Remove(endereco);
 
@@ -80,14 +79,24 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             {
                 var endereco = enderecos[i];
 
-                if (endereco.Condigo == codigo)
+                if (endereco.Codigo == codigo)
                     return endereco;
-                
+
             }
             // Retonar null pois não encontrou o endereço com o código desejado
             return null;
         }
+        public int ObterUltimoCodigo()
+        {
+            int ultimoCodigo = 0;
+            for (int i = 0; i < enderecos.Count; i++)
+            {
+                var endereco = enderecos[i];
 
+                ultimoCodigo = endereco.Codigo;
+            }
+            return ultimoCodigo;
+        }
         public void SalvarArquivo()
         {
             var enderecoEmJson = JsonConvert.SerializeObject(enderecos);
@@ -101,8 +110,9 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
 
             var enderecoEmJson = File.ReadAllText("enderecos.json");
             enderecos = JsonConvert.DeserializeObject<List<Endereco>>(enderecoEmJson);
-                
-            
+
+
         }
+
     }
 }

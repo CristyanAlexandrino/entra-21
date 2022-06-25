@@ -34,6 +34,8 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             // Obter lista dos pacientes, que foram cadastrados, ou seja, armazenados no JSON
             var pacientes = pacienteServico.ObterTodos();
 
+            comboBoxPaciente.Items.Clear();
+
             //Percorrer todos os pacientes adicionando na ComboBox
             for (int i = 0; i < pacientes.Count; i++)
             {
@@ -53,6 +55,8 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             maskedTextBoxCep.Text = "";
             textBoxEnderecoCompleto.Text = "";
             comboBoxPaciente.SelectedIndex = -1;
+
+            dataGridView1.ClearSelection();
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
@@ -72,24 +76,52 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             {
                 return;
             }
-
-            // Construir o objeto de endereço com as variáveis
-            var endereço = new Endereco();
-            endereço.Cep = cep;
-            endereço.EnderecoCompleto = enderecoCompleto;
-            endereço.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
-
-            //Salvar este endereço na lista de endereços e no serviço e no arquivo JSON
-            enderecoServico.Adicionar(endereço);
+            //Verificar se não está em modo de edição, ou seja, modo de cadastro
+            if (dataGridView1.SelectedRows.Count == 0)
+                CadastrarEndereco(cep, enderecoCompleto, nomePaciente);
+            else
+                EditarEndereco(cep, enderecoCompleto, nomePaciente);
 
             // TODO: adicionar ele na lista do DataGridView
-
             PreencherDataGridViewComEnderecos();
 
             LimparCampos();
 
 
         }
+
+        private void EditarEndereco(string cep, string enderecoCompleto, string nomePaciente)
+        {
+            // Obter linha selecionada
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+            // Obter código ques está na coluna oculta do DataGridView
+            var codigoSelecionado = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+
+            // Construir o objeto co os dados da tela
+            var endereco = new Endereco();
+            endereco.Codigo = codigoSelecionado;
+            endereco.EnderecoCompleto = enderecoCompleto;
+            endereco.Cep = cep;
+            endereco.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
+
+            // Atualizar o dado na lista de endereços e salvar o dado atualizado no arquivo JSON
+            enderecoServico.Editar(endereco);
+        }
+
+        private void CadastrarEndereco(string cep, string enderecoCompleto, string? nomePaciente)
+        {
+
+            // Construir o objeto de endereço com as variáveis
+            var endereco = new Endereco();
+            endereco.Codigo = enderecoServico.ObterUltimoCodigo() + 1;
+            endereco.Cep = cep;
+            endereco.EnderecoCompleto = enderecoCompleto;
+            endereco.Paciente = pacienteServico.ObterPorNomePaciente(nomePaciente);
+
+            //Salvar este endereço na lista de endereços e no serviço e no arquivo JSON
+            enderecoServico.Adicionar(endereco);
+        }
+
         private void PreencherDataGridViewComEnderecos()
         {
             //Obter todos os endereços da lista de endereços
@@ -98,8 +130,6 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             // Remover todas as linhas do dataGridView
             dataGridView1.Rows.Clear();
 
-            // Remover todas as linhas de endereços
-            dataGridView1.ClearSelection();
 
             // Percorrer cada um dos endereços adicionado uma nova linhana tabela 
             for (int i = 0; i < enderecos.Count; i++)
@@ -109,12 +139,14 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
                 // Cria uma nova linha no DataGridView
                 dataGridView1.Rows.Add(new object[]
                 {
-                    endereco.Condigo,
+                    endereco.Codigo,
                     endereco.EnderecoCompleto,
                     endereco.Cep,
                     endereco.Paciente.Nome
                 });
             }
+            // Remover todas as linhas de endereços
+            dataGridView1.ClearSelection();
         }
 
         private void ObterDadosCep()
@@ -208,9 +240,9 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
             // para o usuário, que é referente ao código do endereço
             var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
 
-           //Apagar o item da lista de itens no serviço
-           // Atualizar o arquivo JSON
-           //Buscar o endereço da lista de endereços fitrlando por código
+            //Apagar o item da lista de itens no serviço
+            // Atualizar o arquivo JSON
+            //Buscar o endereço da lista de endereços fitrlando por código
             var endereco = enderecoServico.ObterPorCodigo(codigo);
 
             // Apagar o endereço entrontrado da lista de endereços e atualizar o arquivo JSON
@@ -221,6 +253,46 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
 
             // Remover a seleção do DataGridView
             dataGridView1.ClearSelection();
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            ApresentarDadosParaEdicao();
+
+        }
+
+        private void ApresentarDadosParaEdicao()
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+
+                MessageBox.Show("Selecione um endereço para editar");
+
+                return;
+            }
+
+            // Obter a linha que o usuário selecionou
+            var linhaSelecionada = dataGridView1.SelectedRows[0];
+            // Obter o código do endereço que o usuário selecionou
+            var codigo = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
+            // Obter o endereço escolhido
+            var endereco = enderecoServico.ObterPorCodigo(codigo);
+
+            // Apresentar os dados do endereço na tela para edição
+            maskedTextBoxCep.Text = endereco.Cep;
+            textBoxEnderecoCompleto.Text = endereco.EnderecoCompleto;
+            comboBoxPaciente.SelectedItem = endereco.Paciente.Nome;
+        }
+
+        // Quando o formulário é carregado apresenta os dados no DataGridView
+        private void EnderecosForm_Load(object sender, EventArgs e)
+        {
+            PreencherDataGridViewComEnderecos();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ApresentarDadosParaEdicao();
         }
     }
 }

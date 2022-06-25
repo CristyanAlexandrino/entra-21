@@ -38,9 +38,10 @@
             this.buttonCadastroEndereco.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonCadastroEndereco.Image = global::Entra21.ExemploWindowsForm.Properties.Resources.logo_alfinete_google_maps_256;
             this.buttonCadastroEndereco.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonCadastroEndereco.Location = new System.Drawing.Point(25, 43);
+            this.buttonCadastroEndereco.Location = new System.Drawing.Point(21, 11);
+            this.buttonCadastroEndereco.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCadastroEndereco.Name = "buttonCadastroEndereco";
-            this.buttonCadastroEndereco.Size = new System.Drawing.Size(306, 305);
+            this.buttonCadastroEndereco.Size = new System.Drawing.Size(268, 280);
             this.buttonCadastroEndereco.TabIndex = 0;
             this.buttonCadastroEndereco.Text = "Endereço";
             this.buttonCadastroEndereco.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -52,9 +53,10 @@
             this.button2.Font = new System.Drawing.Font("Lucida Sans Typewriter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(397, 43);
+            this.button2.Location = new System.Drawing.Point(344, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(310, 305);
+            this.button2.Size = new System.Drawing.Size(271, 280);
             this.button2.TabIndex = 1;
             this.button2.Text = "Paciente";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -63,11 +65,12 @@
             // 
             // MenuPrincipalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 362);
+            this.ClientSize = new System.Drawing.Size(643, 302);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonCadastroEndereco);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipalForm";

@@ -2,7 +2,7 @@
 {
     internal class Endereco
     {
-        public int Condigo;
+        public int Codigo;
         public string EnderecoCompleto;
         public string Cep;
         public Paciente Paciente;

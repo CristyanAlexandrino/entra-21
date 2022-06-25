@@ -84,6 +84,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(740, 254);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ColumnCodigo
             // 
@@ -191,6 +192,7 @@
             this.buttonEditar.TabIndex = 10;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // buttonCancelar
             // 
@@ -222,6 +224,7 @@
             this.Controls.Add(this.labelEndereco);
             this.Name = "EnderecosForm";
             this.Text = "EnderecosForm";
+            this.Load += new System.EventHandler(this.EnderecosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

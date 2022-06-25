@@ -11,8 +11,6 @@ namespace Entra21.ExemploWindowsForm.Exemplo01
     {
         private List<Paciente> pacientes;
         
-
-
         public PacienteServico()
         {
             pacientes = new List<Paciente>();
