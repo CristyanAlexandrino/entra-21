@@ -40,6 +40,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banco de Dados", "Banco de 
 		..\..\..\..\Desktop\Entra21ExemplosSQL.mdf = ..\..\..\..\Desktop\Entra21ExemplosSQL.mdf
 		..\..\..\..\Desktop\Entra21ExemplosSQL_log.ldf = ..\..\..\..\Desktop\Entra21ExemplosSQL_log.ldf
 		..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql = ..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql
+		..\..\..\..\Desktop\Lista08.sql = ..\..\..\..\Desktop\Lista08.sql
+		..\..\..\..\Desktop\Lista08_log.ldf = ..\..\..\..\Desktop\Lista08_log.ldf
+		..\..\..\..\Desktop\ListaExercicios08.mdf = ..\..\..\..\Desktop\ListaExercicios08.mdf
+		..\..\..\..\Desktop\ListaExercicios08_log.ldf = ..\..\..\..\Desktop\ListaExercicios08_log.ldf
 	EndProjectSection
 EndProject
 Global
