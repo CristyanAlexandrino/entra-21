@@ -37,13 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercicios", "Exercicios", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banco de Dados", "Banco de Dados", "{8680FEF5-F6CC-418B-89EF-EACA065E6735}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\Entra21ExemplosSQL.mdf = ..\..\..\..\Desktop\Entra21ExemplosSQL.mdf
-		..\..\..\..\Desktop\Entra21ExemplosSQL_log.ldf = ..\..\..\..\Desktop\Entra21ExemplosSQL_log.ldf
-		..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql = ..\..\..\..\Desktop\ExemplosSQLComandosBasicos.sql
-		..\..\..\..\Desktop\Lista08.sql = ..\..\..\..\Desktop\Lista08.sql
-		..\..\..\..\Desktop\Lista08_log.ldf = ..\..\..\..\Desktop\Lista08_log.ldf
-		..\..\..\..\Desktop\ListaExercicios08.mdf = ..\..\..\..\Desktop\ListaExercicios08.mdf
-		..\..\..\..\Desktop\ListaExercicios08_log.ldf = ..\..\..\..\Desktop\ListaExercicios08_log.ldf
+		Banco de Dados\ScriptLista08.1.sql = Banco de Dados\ScriptLista08.1.sql
 	EndProjectSection
 EndProject
 Global
