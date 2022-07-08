@@ -180,3 +180,54 @@ INSERT INTO champions
 ( nome, descricao, passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5)
 VALUES ('Katarina', 'A Lâmina Sinistra', 'Voracidade', 
 'Lâmina Saltitante', 'Preparação', 'Shunpo', 'Lótus da Morte');
+
+INSERT INTO champions
+( nome, passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5)
+VALUES ('Yasuo', 'Estilo do Errante', 'Tempestade de Aço', 
+'Parede de Vento', 'Espada Ágil', 'Último suspiro')
+
+INSERT INTO champions
+( nome, descricao, passiva )
+VALUES ('Master Yi', 'O Espadachim Wuju', 'Ataque Duplo')
+
+INSERT INTO champions
+( nome, descricao, passiva, habilidade_2, habilidade_3, habilidade_4)
+VALUES ('Vayne', 'A Caçadora Noturna', 'Rolamento', 
+'Dardo de Prata', 'Condenar', 'Hora Final')
+
+INSERT INTO champions
+( nome, descricao, passiva, habilidade_2, habilidade_3, habilidade_4)
+VALUES ('Lee Sin', 'O Monge Cego', 'Agitação', 'Onda Sônica / Ataque Ressonante', 
+'Proteger / Vontade de Ferro', 'Tempestade / Mutilar')
+
+INSERT INTO champions
+( nome, descricao, passiva, habilidade_3, habilidade_4, habilidade_5)
+VALUES ('Vi', 'A Defensora de Piltover', 'Blindagem',
+ 'Pancada Certeira', 'Força Excessiva', 'Saque e Enterrada')
+
+INSERT INTO champions
+( nome, descricao, passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5)
+VALUES ('Diana', 'o Escárnio da Lua', 'Espada de Prata Lunar', 'Golpe Crescente',
+'Cascata Lívida', 'Colapso Minguante', 'Zênite Lunar')
+
+INSERT INTO champions
+( nome, descricao, passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5)
+VALUES ('Annie', 'A Criança Sombria', 'Piromania', 'Desintegrar', 
+'Incinerar', 'Escudo Fundido', 'Invocar: Tibbers')
+
+INSERT INTO champions
+( nome,  passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5)
+VALUES ('Aatrox', 'Poço de Sangue', 'Voo Sombrio', 'Sede de Sangue / Preço em Sangue', 
+'Lâminas da Aflição', 'Massacre')
+
+SELECT nome,descricao, passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5 FROM champions;
+
+UPDATE champions SET descricao = 'O Imperdoável' WHERE nome = 'Yasuo';
+UPDATE champions SET habilidade_2 = 'Ataque Alpha' , habilidade_3 = 'Meditar',
+ habilidade_4 = 'Estilo Wuju', habilidade_5 = 'Highlander' WHERE nome = 'Master Yi';
+UPDATE champions SET passiva = 'Caçadora Noturna' , habilidade_2 = 'Rolamento', 
+habilidade_3 = 'Dardos de Prata',  habilidade_4 = 'Condenar', habilidade_5 = 'Hora Final' WHERE nome = 'Vayne';
+UPDATE champions SET habilidade_5 = 'Fúria do Dragão' WHERE nome = 'Lee Sin';
+UPDATE champions SET descricao = 'A Espada Darkin' WHERE nome = 'Aatrox';
+
+SELECT TOP(8)id, nome,descricao, passiva, habilidade_2, habilidade_3, habilidade_4, habilidade_5 FROM champions;
