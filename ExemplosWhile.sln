@@ -38,6 +38,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banco de Dados", "Banco de Dados", "{8680FEF5-F6CC-418B-89EF-EACA065E6735}"
 	ProjectSection(SolutionItems) = preProject
 		Banco de Dados\ScriptLista08.1.sql = Banco de Dados\ScriptLista08.1.sql
+		Banco de Dados\ScriptListaExercicios08.1.sql = Banco de Dados\ScriptListaExercicios08.1.sql
 	EndProjectSection
 EndProject
 Global
