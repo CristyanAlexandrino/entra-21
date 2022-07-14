@@ -120,3 +120,78 @@ SELECT
 		UPDATE pedidos SET status = 1 WHERE id = 2;
 SELECT * FROM pedidos;
 
+-- Adicionar as oeças ao pedido
+SELECT * FROM pecas;
+
+
+INSERT INTO pedidos_pecas(id_pedido, id_peca, quantidade) VALUES
+(1, 2, 2), -- 2 SSDs M2 para o pedido 1
+(1, 4, 1), -- 1 GTX 1060 para o pedido 1
+(1, 6,1); -- 1 módulo 16G RAM DDS
+
+UPDATE pedidos SET id_cliente = 2 WHERE id = 1;
+
+-- Consultar apresentando nome cliente, nome peça,
+-- quantidade, valor_unitario, total das pelas
+SELECT
+	pd.id AS 'Código do pedido',
+	c.nome As 'Cliente',
+	p.nome AS 'Peça',
+	pp.quantidade AS 'Quantidade',
+	CONCAT('R$ ', p.preco_unitario) AS 'Valor unitário',
+	CONCAT('R$ ', p.preco_unitario * pp.quantidade) AS 'Total das peças'
+	FROM pedidos_pecas AS pp
+	INNER JOIN pecas AS p ON(pp.id_peca = p.id)
+	INNER JOIN pedidos AS pd ON(pp.id_pedido = pd.id)
+	INNER JOIN clientes AS c ON(pd.id_cliente = c.id);
+	-- https://www.invertexto.com/fsens
+
+	INSERT INTO pedidos (id_cliente, data_criacao, status) VALUES
+	(1, GETDATE(), 0); -- GETDATE() é o mesmo que DateTime.Now
+
+	-- Criado pedido para o Claúdio
+	INSERT INTO pedidos_pecas(id_pedido, id_peca, quantidade) VALUES
+	(3, 2, 2), -- id_pedido = 3, id_peca = 2 (SSD 240M2), quantidade = 2
+	(3, 3, 2), -- id_pedido = 2, id_peca = 3 (RTX3090 TI), quantidade = 2
+	(3, 5, 4); -- id_pedido = 3, id_peca = 5 (16G RAM DDRS), quantidade = 4 Quad Chanel
+
+
+	-- Apresentar informações do pedido do cliente Claúdio
+	SELECT 
+		p.id AS 'Código Pedido',
+		p.status AS 'Status Pedido',
+		c.nome AS 'Cliente',
+		CONCAT(
+			e.estado, ' ',
+			e.cidade, ' ',
+			e.bairro, ' ',
+			e.logradouro, ' ',
+			e.numero) AS 'Endereço completo'
+		FROM pedidos AS p
+		INNER JOIN clientes AS c ON(p.id_cliente = c.id)
+		INNER JOIN enderecos AS e ON(c.id = e.id_cliente)
+		WHERE p.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.389-73');
+
+-- Efeticar a compra do pedido do Claúdio
+UPDATE pedidos
+	SET 
+		status = 2,
+		data_efetivacao_compra = '2022-07-12 17:30:00'
+		WHERE id = 3
+
+-- Consultar peças do pedido do Claúdio
+		SELECT 
+		p.id AS 'Código Pedido',
+		p.status AS 'Status Pedido',
+		pec.nome AS 'Cliente'
+		FROM pedidos AS p
+		INNER JOIN clientes AS c ON(p.id_cliente = c.id)
+		INNER JOIN pedidos_pecas AS pp ON(p.id = pp.id_pedido)
+		INNER JOIN pecas AS pec ON(pp.id_peca = pec.id)
+		WHERE p.id_cliente = (SELECT id FROM clientes WHERE cpf = '070.355.489-73');
+
+		SELECT * FROM enderecos;
+
+
+
+
