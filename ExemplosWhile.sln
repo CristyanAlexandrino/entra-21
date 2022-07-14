@@ -42,6 +42,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Banco de Dados", "Banco de 
 		Banco de Dados\ScriptListaExercicios08.1.sql = Banco de Dados\ScriptListaExercicios08.1.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.BancoDados01.Ado.Net", "Entra21.BancoDados01.Ado.Net\Entra21.BancoDados01.Ado.Net.csproj", "{1ECE65D5-1091-4A2A-B543-BDD87DF25CA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5CE535D-A39A-484B-A82D-12D254ADFC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ECE65D5-1091-4A2A-B543-BDD87DF25CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ECE65D5-1091-4A2A-B543-BDD87DF25CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ECE65D5-1091-4A2A-B543-BDD87DF25CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ECE65D5-1091-4A2A-B543-BDD87DF25CA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
