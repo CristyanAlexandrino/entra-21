@@ -68,10 +68,12 @@
             // 
             // comboBoxEditora
             // 
+            this.comboBoxEditora.DisplayMember = "Nome";
+            this.comboBoxEditora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxEditora.FormattingEnabled = true;
             this.comboBoxEditora.Location = new System.Drawing.Point(12, 85);
             this.comboBoxEditora.Name = "comboBoxEditora";
-            this.comboBoxEditora.Size = new System.Drawing.Size(300, 23);
+            this.comboBoxEditora.Size = new System.Drawing.Size(300, 29);
             this.comboBoxEditora.TabIndex = 3;
             // 
             // labelTipoPersonagem
@@ -87,15 +89,17 @@
             // comboBoxTipoPersonagem
             // 
             this.comboBoxTipoPersonagem.DisplayMember = "Tipo";
+            this.comboBoxTipoPersonagem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxTipoPersonagem.FormattingEnabled = true;
             this.comboBoxTipoPersonagem.Location = new System.Drawing.Point(12, 138);
             this.comboBoxTipoPersonagem.Name = "comboBoxTipoPersonagem";
-            this.comboBoxTipoPersonagem.Size = new System.Drawing.Size(300, 23);
+            this.comboBoxTipoPersonagem.Size = new System.Drawing.Size(300, 29);
             this.comboBoxTipoPersonagem.TabIndex = 5;
             // 
             // buttonSalvar
             // 
-            this.buttonSalvar.Location = new System.Drawing.Point(184, 167);
+            this.buttonSalvar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSalvar.Location = new System.Drawing.Point(184, 173);
             this.buttonSalvar.Name = "buttonSalvar";
             this.buttonSalvar.Size = new System.Drawing.Size(120, 42);
             this.buttonSalvar.TabIndex = 6;
@@ -105,18 +109,20 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(55, 167);
+            this.buttonCancelar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCancelar.Location = new System.Drawing.Point(58, 173);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(120, 42);
             this.buttonCancelar.TabIndex = 7;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // PersonagemCadastroEdicaoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(341, 223);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSalvar);
             this.Controls.Add(this.comboBoxTipoPersonagem);
@@ -126,6 +132,7 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.labelNome);
             this.Name = "PersonagemCadastroEdicaoForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PersonagemCadastroEdicaoForm";
             this.ResumeLayout(false);
             this.PerformLayout();

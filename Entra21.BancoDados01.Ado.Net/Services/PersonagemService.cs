@@ -93,7 +93,7 @@ tp.tipo AS 'tipo_personagem_tipo',
 e.id AS 'editora_id'
 e.nome AS 'editora_nome'
 FROM personagens AS p
-INNER JOIN tipos_personagens AS tp ON(p.id_tipo_personagem = tp.id)
+INNER JOIN tipos_personagens AS tp ON(p.id_tipo_personagens = tp.id)
 INNER JOIN editoras AS e ON(p.id_editora = e.id)";
             // Criando tabela em memória para armazenar os registros do SELECT
             var tabelaEmMemoria = new DataTable();
