@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entra21.BancoDados01.Ado.Net.Views.TiposPersonagens;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,13 +20,13 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
 
         private void buttonTiposPersonagens_Click(object sender, EventArgs e)
         {
-            var tipoPersonagem = new PersonagemListagemForm();
+            var tipoPersonagem = new TiposPersonagensListagemForm();
             tipoPersonagem.ShowDialog();
         }
 
         private void buttonPersonagens_Click(object sender, EventArgs e)
         {
-            var personagemForm = new PersonagemCadastroEdicaoForm();
+            var personagemForm = new PersonagemListagemForm();
             personagemForm.ShowDialog();
         }
     }

@@ -86,14 +86,15 @@ namespace Entra21.BancoDados01.Ado.Net.Services
         {
             var conexao = new Conexao().Conectar();
             var comando = conexao.CreateCommand();
-            comando.CommandText = @"SELECT p.id AS 'id',
-          p.nome AS 'nome',
+            comando.CommandText = @"SELECT 
+p.id AS 'id',
+p.nome AS 'nome',
 tp.id AS 'tipo_personagem_id',
 tp.tipo AS 'tipo_personagem_tipo',
-e.id AS 'editora_id'
+e.id AS 'editora_id',
 e.nome AS 'editora_nome'
 FROM personagens AS p
-INNER JOIN tipos_personagens AS tp ON(p.id_tipo_personagens = tp.id)
+INNER JOIN tipos_personagens AS tp ON(p.id_tipo_personagem = tp.id)
 INNER JOIN editoras AS e ON(p.id_editora = e.id)";
             // Criando tabela em memória para armazenar os registros do SELECT
             var tabelaEmMemoria = new DataTable();
@@ -118,7 +119,7 @@ INNER JOIN editoras AS e ON(p.id_editora = e.id)";
                 personagem.Editora.Nome = registro["editora_nome"].ToString();
 
                 personagem.TipoPersonagem = new TipoPersonagem();
-                personagem.TipoPersonagem.Id = Convert.ToInt32(registro["tipo_personagem_tipo"]);
+                personagem.TipoPersonagem.Id = Convert.ToInt32(registro["tipo_personagem_id"]);
                 personagem.TipoPersonagem.Tipo = registro["tipo_personagem_tipo"].ToString();
 
                 personagens.Add(personagem);

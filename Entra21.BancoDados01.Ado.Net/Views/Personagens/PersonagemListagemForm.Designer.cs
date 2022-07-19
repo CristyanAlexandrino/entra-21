@@ -109,6 +109,7 @@
             this.buttonApagar.TabIndex = 4;
             this.buttonApagar.Text = "Apagar";
             this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
             // PersonagemListagemForm
             // 
