@@ -1,13 +1,4 @@
 ﻿using Entra21.BancoDados01.Ado.Net.Services;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
 {
@@ -72,7 +63,7 @@ namespace Entra21.BancoDados01.Ado.Net.Views.Personagens
 
             var linhaSelecionada = dataGridView1.SelectedRows[0];
             var id = Convert.ToInt32(linhaSelecionada.Cells[0].Value);
-            
+
             var personagem = _personagemService.ObterPorId(id);
 
             var personagemCadastroForm = new PersonagemCadastroEdicaoForm(personagem);
